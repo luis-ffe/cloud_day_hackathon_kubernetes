@@ -1,0 +1,7 @@
+#MEGABOSSES@42Porto
+
+runtime: python39
+
+handlers:
+- url: /.*
+  script: auto
