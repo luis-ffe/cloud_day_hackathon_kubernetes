@@ -1,0 +1,20 @@
+#MEGABOSSES@42Porto
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chatbot-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: chatbot
+  template:
+    metadata:
+      labels:
+        app: chatbot
+    spec:
+      containers:
+      - name: nginx
+        image: gcr.io/hacka-426822/chatbot:latest
+        ports:
+        - containerPort: 80

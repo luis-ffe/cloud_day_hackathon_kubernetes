@@ -1,0 +1,22 @@
+
+#MEGABOSSES@42Porto
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-static-website
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-static-website
+  template:
+    metadata:
+      labels:
+        app: my-static-website
+    spec:
+      containers:
+      - name: my-static-website
+        image: gcr.io/hacka-426822/micro_svcteste
+        ports:
+        - containerPort: 80

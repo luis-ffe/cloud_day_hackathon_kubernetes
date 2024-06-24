@@ -1,1 +1,0 @@
-# google_cloud_day_hackathon
