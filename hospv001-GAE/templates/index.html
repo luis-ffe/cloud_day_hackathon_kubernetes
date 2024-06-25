@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Triagem</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+
+<body>
+    <div class="top-bar" id="topBar">
+        <img src="/static/logo.png" alt="Logo">
+        <div class="logo-title">
+            <div class="hospital-name">RITA </div>
+            <div class="hospital-description">Robô Inteligente de Triagem Automatizada</div>
+        </div>
+        <div class="menu">
+            <img src="https://img.icons8.com/ios-filled/50/000000/menu.png" alt="Menu" id="menuIcon">
+            <img src="https://img.icons8.com/ios-filled/50/000000/settings.png" alt="Settings" id="settingsIcon">
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Sistema de Triagem</h1>
+        <div class="button-container">
+            <button id="startTriage">Iniciar</button>
+        </div>
+    </div>
+
+    <div id="df-messenger">
+        <link rel="stylesheet"
+            href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+        <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+        <df-messenger
+            location="europe-west2"
+            project-id="hacka-426822"
+            agent-id="9e25a07a-9f62-41a3-ad5a-a8789187e58c"
+            language-code="pt"
+            intent="welcome"
+            max-query-length="-1"
+            allow-feedback="all">
+            <df-messenger-chat chat-title="RITA - Robô Inteligente de Triagem Automatizada">
+            </df-messenger-chat>
+        </df-messenger>
+    </div>
+
+    <div class="signature">
+        Powered by Google Cloud
+    </div>
+    <script>
+        document.getElementById('startTriage').onclick = function () {
+            document.getElementById('df-messenger').style.display = 'block';
+            document.getElementById('topBar').style.display = 'none';
+            this.style.display = 'none';
+        };
+    </script>
+</body>
+
+</html>

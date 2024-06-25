@@ -1,0 +1,29 @@
+
+#MEGABOSSES@42Porto
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: micro-svc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: micro-svc
+  template:
+    metadata:
+      labels:
+        app: micro-svc
+    spec:
+      containers:
+      - name: micro-svc
+        image: gcr.io/hacka-426822/micro-svc:v2
+        ports:
+        - containerPort: 8080
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "500m"
+            memory: "512Mi"

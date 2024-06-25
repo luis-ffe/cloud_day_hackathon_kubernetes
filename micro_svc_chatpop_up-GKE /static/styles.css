@@ -1,0 +1,78 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+}
+
+button {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    cursor: pointer;
+    background-color: white;
+    color: #078468;
+    border: 3px solid #078468;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0;
+}
+
+/* Chat Popup */
+.chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 400px;
+    height: 80%;
+    border: 3px solid #078468;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.chat-header {
+    background-color: #078468;
+    color: white;
+    padding: 10px;
+    text-align: right;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chat-header h2 {
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+    font-size: 18px;
+}
+
+.close {
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+#df-messenger {
+    height: calc(100% - 50px);
+    width: 100%;
+}
+
+#df-messenger df-messenger-chat {
+    height: 100%;
+}

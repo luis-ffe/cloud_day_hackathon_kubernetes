@@ -1,0 +1,29 @@
+
+#MEGABOSSES@42Porto
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: micro-svc-popup
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: micro-svc-popup
+  template:
+    metadata:
+      labels:
+        app: micro-svc-popup
+    spec:
+      containers:
+      - name: micro-svc
+        image: gcr.io/hacka-426822/microsvcpopup:v1
+        ports:
+        - containerPort: 8080
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "500m"
+            memory: "512Mi"

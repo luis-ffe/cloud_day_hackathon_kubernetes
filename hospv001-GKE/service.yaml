@@ -1,0 +1,15 @@
+
+#MEGABOSSES@42Porto
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: website-hospital-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: website-hospital
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
