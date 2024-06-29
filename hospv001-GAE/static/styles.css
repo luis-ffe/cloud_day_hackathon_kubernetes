@@ -1,3 +1,4 @@
+
 body,
 html {
     height: 100%;
@@ -112,6 +113,17 @@ button {
     left: 0;
     height: 100%;
     width: 100%;
+    --df-messenger-font-color: #000;
+    --df-messenger-font-family: Google Sans;
+    --df-messenger-chat-background: #f4f4f4;
+    --df-messenger-message-user-background: #078468;
+    --df-messenger-message-bot-background: #c5e3d8;
+    --df-messenger-message-user-font-color: #ffffff;
+    --df-messenger-send-icon-color-active: #078468;
+    --df-messenger-send-icon-color-hover: #078468;
+    --df-messenger-input-box-focus-border: 2px solid #078468;
+    --df-messenger-input-background: #f4f4f4;
+
 }
 
 #df-messenger df-messenger-chat {
@@ -122,9 +134,9 @@ button {
 @media (max-width: 768px) {
     #df-messenger {
         width: 100%;
-        height: 100%;
-        /* Adjust as needed */
+        height: calc(100% - 60px); /* Leave some space at the top */
         bottom: 0;
+        top: 60px; /* Adjust as needed */
     }
 
     .signature {
@@ -144,4 +156,39 @@ button {
     button {
         font-size: 16px;
     }
+
+    .top-bar {
+        height: 60px; /* Adjust for smaller screens */
+        padding: 10px;
+    }
+
+    .top-bar img {
+        height: 30px; /* Adjust logo size */
+        margin-right: 16px;
+    }
+
+    .top-bar .logo-title .hospital-name {
+        font-size: 14px;
+    }
+
+    .top-bar .logo-title .hospital-description {
+        font-size: 10px;
+    }
+
+    .top-bar .menu img {
+        height: 20px;
+        width: 20px;
+        margin-left: 10px;
+    }
+}
+
+/* Prevent zoom on input */
+input[type="text"], 
+input[type="email"], 
+input[type="number"], 
+input[type="search"], 
+input[type="tel"], 
+input[type="url"], 
+textarea {
+    font-size: 16px;
 }
